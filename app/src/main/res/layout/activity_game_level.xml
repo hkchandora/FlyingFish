@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context=".GameLevel">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@color/While"
+        android:text="Score"
+        android:onClick="Score"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:padding="10dp"/>
+
+
+    <ImageButton
+        android:id="@+id/volume_up_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_button"
+        android:src="@drawable/ic_volume_up"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/share_btn"
+        android:layout_margin="5dp"/>
+
+    <ImageButton
+        android:id="@+id/volume_off_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_button"
+        android:src="@drawable/ic_volume_off"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/share_btn"
+        android:layout_margin="5dp"/>
+
+    <ImageButton
+        android:id="@+id/share_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:onClick="Share"
+        android:src="@drawable/ic_share"
+        android:background="@drawable/circle_button"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/instruction_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Game Instruction :"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/instruction_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yellow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:text="Score + 10"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linear1"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:text="Score + 20"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/red" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:text="Lose Heart"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/low_level_btn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="Low Level"
+        android:textAllCaps="false"
+        android:layout_above="@+id/medium_level_btn"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/medium_level_btn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="Medium Level"
+        android:layout_above="@+id/high_level_btn"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/high_level_btn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="High Level"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
